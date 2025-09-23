@@ -1,0 +1,26 @@
+{
+  "name": "api-rest-milloras",
+  "version": "1.0.0",
+  "description": "maury-ashmed",
+  "main": "indexCopia.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maury-l1/API-REST-milloras.git"
+  },
+  "author": "m-a",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maury-l1/API-REST-milloras/issues"
+  },
+  "homepage": "https://github.com/maury-l1/API-REST-milloras#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
