@@ -50,9 +50,17 @@ app.get("/books/:id",(req,res)=>{
 
 //Creem un endpoint del tipus post per afegir un llibre
 
+//POST SOLUCIONADO
+//Falta identificar errores originales e instalar nodemon
 app.post("/books",(req,res)=>{ 
     const data=readData();
     const body=req.body;
+    const {name} = req.body;
+    const titleExist = data.books.some(book => book.name === name);
+    if (titleExist){
+        return res.status(400).json({message: "Este libro ya existe."})
+    }
+      
     //todo lo que viene en ...body se agrega al nuevo libro
     const newBook={
         id:data.books.length+1,
@@ -62,7 +70,6 @@ app.post("/books",(req,res)=>{
     writeData(data);
     res.json(newBook);
 });
-
 //Creem un endpoint per modificar un llibre
 
 
